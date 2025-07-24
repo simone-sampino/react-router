@@ -1,6 +1,25 @@
+import { Link, NavLink } from "react-router-dom";
 import reactLogo from "../assets/react.svg";
 
 export default function Header() {
+  const menu = [
+    {
+      id: 1,
+      path: "/",
+      text: "Home",
+    },
+    {
+      id: 2,
+      path: "/about",
+      text: "About us",
+    },
+    {
+      id: 3,
+      path: "/products",
+      text: "Products",
+    },
+  ];
+
   return (
     <>
       <header>
@@ -22,21 +41,31 @@ export default function Header() {
             </button>
             <div className="collapse navbar-collapse" id="collapsibleNavId">
               <ul className="navbar-nav ms-auto mt-2 mt-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
+                {menu.map((item) => {
+                  return (
+                    <li key={item.id} className="nav-item">
+                      <NavLink className="nav-link" to={item.path}>
+                        {item.text}
+                      </NavLink>
+                    </li>
+                  );
+                })}
+
+                {/* <li className="nav-item">
+                  <NavLink className="nav-link" to="/">
                     Home<span className="visually-hidden">(current)</span>
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/about">
+                  <NavLink className="nav-link" to="/about">
                     About us
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/products">
+                  <NavLink className="nav-link" to="/products">
                     Products
-                  </a>
-                </li>
+                  </NavLink>
+                </li> */}
               </ul>
             </div>
           </div>

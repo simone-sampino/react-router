@@ -23,7 +23,7 @@ export default function ProductsPage() {
           <div className="row g-5">
             {products.map((item) => {
               return (
-                <div key={item.id} className="col-sm-12 col-md-6 col-lg-4">
+                <div key={item.id} className="col-sm-12 col-md-6 col-xl-4">
                   <div className="card d-flex align-items-center p-5 h-100">
                     <img
                       className="card-img-top img-fluid max-width"
@@ -32,14 +32,16 @@ export default function ProductsPage() {
                     />
                     <div className="card-body mt-3">
                       <h3 className="card-title">{item.title}</h3>
-                      <p className="card-text badge text-bg-success">
-                        <i class="bi bi-currency-euro"></i>
-                        {item.price}
-                      </p>
-                      <p className="card-text">{item.description}</p>
-                      <p className="card-text badge text-bg-info text-uppercase">
-                        {item.category}
-                      </p>
+                      <div className="d-flex justify-content-between my-3">
+                        <span className="card-text badge text-bg-success">
+                          <i class="bi bi-currency-euro"></i>
+                          {item.price}
+                        </span>
+                        <span className="card-text badge text-bg-info text-uppercase">
+                          {item.category}
+                        </span>
+                      </div>
+                      <span className="card-text">{item.description}</span>
                     </div>
                   </div>
                 </div>
