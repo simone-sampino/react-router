@@ -6,7 +6,7 @@ export default function Header() {
       <header>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            <a className="navbar-brand" to="#">
+            <a className="navbar-brand" href="#">
               <img src={reactLogo} alt="reactLogo" />
             </a>
             <button

@@ -23,10 +23,10 @@ export default function ProductsPage() {
           <div className="row g-5">
             {products.map((item) => {
               return (
-                <div key={item.id} className="col-4">
-                  <div className="card p-5 h-100">
+                <div key={item.id} className="col-sm-12 col-md-6 col-lg-4">
+                  <div className="card d-flex align-items-center p-5 h-100">
                     <img
-                      className="card-img-top img-fluid max-width pb-5"
+                      className="card-img-top img-fluid max-width"
                       src={item.image}
                       alt={item.title}
                     />
