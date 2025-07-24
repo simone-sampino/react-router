@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+// import Header from "../components/Header";
+// import Footer from "../components/Footer";
 
 export default function ProductsPage() {
   const [products, setProducts] = useState([]);
@@ -13,8 +13,7 @@ export default function ProductsPage() {
 
   return (
     <>
-      {/* header */}
-      <Header />
+      {/* <Header /> */}
 
       {/* main */}
       <main className="bg-secondary-subtle">
@@ -51,8 +50,7 @@ export default function ProductsPage() {
         </div>
       </main>
 
-      {/* footer */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

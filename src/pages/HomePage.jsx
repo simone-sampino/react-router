@@ -1,11 +1,10 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+// import Header from "../components/Header";
+// import Footer from "../components/Footer";
 
 export default function HomePage() {
   return (
     <>
-      {/* header */}
-      <Header />
+      {/* <Header /> */}
 
       {/* main */}
       <main>
@@ -25,8 +24,7 @@ export default function HomePage() {
         </div>
       </main>
 
-      {/* footer */}
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }
